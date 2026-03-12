@@ -53,4 +53,4 @@ go build -o avbrute main.go
 
 ## Note on Performance
 
-If the brute-force process feels slow even when using a high number of threads (`-t 1000+`), the bottleneck is the target backend server, not the tool. The maximum execution speed is entirely dependent on the server's throughput and its capacity to handle concurrent requests (e.g., a multi-worker setup).
+If the brute-force process feels slow even when using a high number of threads (`-t 1000+`), the bottleneck is the target backend server, not the tool. The maximum execution speed is entirely dependent on the server's throughput and its capacity to handle concurrent requests (e.g., a multi-worker setup). [@avdev](https://t.me/avdev)
