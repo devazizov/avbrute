@@ -5,7 +5,7 @@ A high-speed, asynchronous OTP (One-Time Password) brute-force tool written in G
 ## Installation
 
 ```bash
-git clone [https://github.com/username/otp-brute.git](https://github.com/username/otp-brute.git)
+git clone [https://github.com/devazizov/avbrute.git](https://github.com/devazizov/avbrute.git)
 cd otp-brute
 go build -o otp-brute main.go
 
